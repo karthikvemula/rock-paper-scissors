@@ -3,6 +3,7 @@ FROM docker.bintray.io/jfrog/artifactory-pro:6.23.13
 
 #MAINTAINER jainishs@jfrog.com
 CMD printf "\nCONGRATULATIONS!!!\n\nYou have just set up your first Docker repository with the new JFrog Platform!\n\n"
+EXPOSE 8081 10042
 
 # Will be filtered and copied in etc when first running
 #ADD artifactory.config.xml /tmp/artifactory.config.xml
