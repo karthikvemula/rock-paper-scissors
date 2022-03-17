@@ -18,6 +18,6 @@ EXPOSE 8081 10042
 #COPY server.xml /opt/jfrog/artifactory/tomcat/conf/server.xml
 
 # This should be mapped to a shared NFS mounted on the host
-EXPOSE 8081 10042
+#EXPOSE 8081 10042
 
 #ENTRYPOINT /runArtifactory.sh
