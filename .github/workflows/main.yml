@@ -42,8 +42,8 @@ jobs:
         working-directory: .
         run: |
           mvn -B package --file pom.xml
-          #mkdir staging && cp target/*.jar staging
-          cp webapps/*.jar
+          mkdir webapps && cp target/*.jar staging
+          #cp webapps/*.jar
 
       - name: Step 4 - Set up a cache for Maven
         uses: actions/cache@v2
