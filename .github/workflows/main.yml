@@ -39,9 +39,10 @@ jobs:
           java-version: 1.8
     
       - name: Step 3 - Have GitHub Actions Build Maven Project
+        working-directory: webapps
         run: |
           mvn -B package --file pom.xml
-          mkdir staging && cp target/*.jar staging
+          #mkdir staging && cp target/*.jar staging
           ##cp webapps/
 
       - name: Step 4 - Set up a cache for Maven
