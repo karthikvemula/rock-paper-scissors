@@ -42,7 +42,7 @@ jobs:
         working-directory: .
         run: |
           mvn -B package --file pom.xml
-          mkdir staging && cp target/*.jar staging
+          #mkdir staging && cp target/*.jar staging
           #cp webapps/*.jar
 
       - name: Step 4 - Set up a cache for Maven
@@ -57,7 +57,7 @@ jobs:
         with:
           name: roshambo-1.0-SNAPSHOT.jar 
           #github-actions-artifact
-          path: /home/runner/work/rock-paper-scissors/rock-paper-scissors/webapps
+          path: webapps
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
       - name: Set up Docker Buildx
