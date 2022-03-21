@@ -56,8 +56,8 @@ jobs:
         with:
           name: github-actions-artifact
           path: staging
-       /*  
-      #The terraform fmt command is used to rewrite Terraform configuration files to a canonical format and style.
+         
+      /*The terraform fmt command is used to rewrite Terraform configuration files to a canonical format and style.
       - name: 'Terraform Format'
         uses: hashicorp/terraform-github-actions@master
         with:
@@ -92,7 +92,8 @@ jobs:
         with:
           tf_actions_version: 0.14.8
           tf_actions_subcommand: 'apply'
-          tf_actions_working_dir: "./terraform" */
+          tf_actions_working_dir: "./terraform"
+          test*/
        
 
         
