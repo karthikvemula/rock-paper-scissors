@@ -55,7 +55,8 @@ jobs:
       - name: Step 5 - Persist workflow data as artificats
         uses: actions/upload-artifact@v2
         with:
-          name: roshambo-1.0-SNAPSHOT.jar 
+          name: roshambo-1.0-SNAPSHOT.jar
+          working-directory: .
           #github-actions-artifact
           path: webapps
       - name: Set up QEMU
