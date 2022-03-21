@@ -56,9 +56,9 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: roshambo-1.0-SNAPSHOT.jar
-          working-directory: .
+          #working-directory: .
           #github-actions-artifact
-          path: webapps
+          path: webapps/roshambo-1.0-SNAPSHOT.jar
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
       - name: Set up Docker Buildx
