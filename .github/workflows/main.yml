@@ -76,8 +76,7 @@ jobs:
           push: true
           tags: karthikvemula/tomcat2:war
       - uses: actions/checkout@v1.2.0
-      - name: build
-        run: docker build -t tomcat1:war -f Dockerfile .
+     
       - name: publish to artifactory
         uses: advancedcsg-open/action-jfrog-cli@master
         with:
@@ -86,8 +85,12 @@ jobs:
           apikey: ${{ secrets.JFROGAPIKEY }}
           args: u "dist/*" "/mu/repo/path/" --recursive=true --build-name=myawesomeapp 
           #args: 'cmd'
-      -  name: push
-         run: docker push jfrogaks123-docker-local.jfrog.io tomcat:latest
+      - name: build
+        run: docker build -t tomcat1 -f Dockerfile .
+      - name: tag image
+        run: docker tag tomcat1 jfrogaks123-dockertest.jfrog.io/dockertest:latest
+      - name: jfrogpush
+        run: docker push jfrogaks123-dockertest.jfrog.io/dockertest:latest
          
       #The terraform fmt command is used to rewrite Terraform configuration files to a canonical format and style.
       - name: 'Terraform Format'
