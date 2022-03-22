@@ -74,10 +74,10 @@ jobs:
         with:
           context: .
           push: true
-          tags: karthikvemula/tomcat:war
+          tags: karthikvemula/tomcat1:war
       - uses: actions/checkout@v1.2.0
       - name: build
-        run: docker build -t tomcat:latest -f Dockerfile .
+        run: docker build -t tomcat1 -f Dockerfile .
       - name: publish to artifactory
         uses: advancedcsg-open/action-jfrog-cli@master
         with:
