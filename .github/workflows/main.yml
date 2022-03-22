@@ -58,7 +58,7 @@ jobs:
           name: roshambo-1.0-SNAPSHOT.jar
           #working-directory: .
           #github-actions-artifact
-          path: webapps/roshambo-1.0-SNAPSHOT.jar
+          path: /home/runner/work/rock-paper-scissors/rock-paper-scissors/target/**
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
       - name: Set up Docker Buildx
