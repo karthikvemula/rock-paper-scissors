@@ -81,18 +81,18 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      # create resourceGroup
-      - name: "Create Resource Group"
-        run: |
-          az group create \
-          --subscription "Free Trial" \
-          --name "KarthikResourceGroup" \
-          --location "(US) EAST US" > /dev/null && echo "Resource Group Created."
-      # uses: actions/checkout@v1.2.0
+      #create resourceGroup
+      #- name: "Create Resource Group"
+        #run: |
+          #az group create \
+          #--subscription "Free Trial" \
+         # --name "KarthikResourceGroup" \
+        #  --location "(US) EAST US" > /dev/null && echo "Resource Group Created."
+       #uses: actions/checkout@v1.2.0
       - name: 'Deploy to Azure Container Instances'
         uses: 'azure/aci-deploy@v1'
         with:
-          resource-group: KarthikResourceGroup
+          resource-group: Arch_RG
           dns-name-label: helloworlddevtest
           image: karthikvemula/tomcat2:war
           cpu: 1
