@@ -94,10 +94,12 @@ jobs:
         with:
           #creds: ${{ secrets.AZURE_CREDENTIALS }}
           resource-group: Arch_RG
-          #dns-name-label: helloworlddevtest
+          dns-name-label: helloworlddevtest
           image: karthikvemula/tomcat2:war
           cpu: 1
           memory: 1
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
          # registry-username: ${{ secrets.AZURE_USERNAME }}
           #registry-password: ${{ secrets.AZURE_PASSWORD }}
           name: helloworlddev
