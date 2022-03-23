@@ -86,9 +86,21 @@ jobs:
         run: |
           az group create \
           --subscription "Free Trial" \
-          --name KarthikResourceGroup \
-          --location eastus > /dev/null && echo "Resource Group Created."
-      - uses: actions/checkout@v1.2.0
+          --name "KarthikResourceGroup" \
+          --location "(US) EAST US" > /dev/null && echo "Resource Group Created."
+      # uses: actions/checkout@v1.2.0
+      - name: 'Deploy to Azure Container Instances'
+        uses: 'azure/aci-deploy@v1'
+        with:
+          resource-group: KarthikResourceGroup
+          dns-name-label: helloworlddevtest
+          image: karthikvemula/tomcat2:war
+          cpu: 1
+          memory: 1
+         # registry-username: ${{ secrets.AZURE_USERNAME }}
+          #registry-password: ${{ secrets.AZURE_PASSWORD }}
+          name: helloworlddev
+          location: '(US) EAST US'
      
       
           
