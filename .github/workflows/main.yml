@@ -80,15 +80,15 @@ jobs:
         uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
-      - name: Azure Kubernetes set context
-        uses: Azure/aks-set-context@v1
-        with:
+      #- name: Azure Kubernetes set context
+       # uses: Azure/aks-set-context@v1
+        #with:
         # Azure credentials i.e. output of `az ad sp create-for-rbac --sdk-auth`
-          creds: '${{secrets.AZURE_CREDENTIALS}}'
+         # creds: '${{secrets.AZURE_CREDENTIALS}}'
         # Resource Group Name
-          resource-group: Arch_RG
+        #  resource-group: Arch_RG
         # AKS Cluster Name
-          cluster-name: ga-aks-demo-cluster
+         # cluster-name: ga-aks-demo-cluster
 
   # Create K8s secrets to pull images
       - name: Create secret in Kubernetes cluster
