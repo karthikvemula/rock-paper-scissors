@@ -92,9 +92,9 @@ jobs:
       - name: 'Deploy to Azure Container Instances'
         uses: 'azure/aci-deploy@v1'
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          #creds: ${{ secrets.AZURE_CREDENTIALS }}
           resource-group: Arch_RG
-          dns-name-label: helloworlddevtest
+          #dns-name-label: helloworlddevtest
           image: karthikvemula/tomcat2:war
           cpu: 1
           memory: 1
