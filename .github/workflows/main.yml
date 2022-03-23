@@ -100,7 +100,7 @@ jobs:
          # registry-username: ${{ secrets.AZURE_USERNAME }}
           #registry-password: ${{ secrets.AZURE_PASSWORD }}
           name: helloworlddev
-          location: '(US) EAST US'
+          location: 'EAST US'
      
       
           
