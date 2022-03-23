@@ -75,6 +75,19 @@ jobs:
           context: .
           push: true
           tags: karthikvemula/tomcat2:war
+       # log into Azure
+      - name: "Login via Azure CLI"
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      # create resourceGroup
+      - name: "Create Resource Group"
+        run: |
+          az group create \
+          --subscription "$subName" \
+          --name $resourceGroup \
+          --location $location > /dev/null && echo "Resource Group Created."
       - uses: actions/checkout@v1.2.0
      
       - name: publish to artifactory
