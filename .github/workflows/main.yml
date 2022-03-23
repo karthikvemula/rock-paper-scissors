@@ -98,10 +98,10 @@ jobs:
           image: karthikvemula/tomcat2:war
           cpu: 1
           memory: 1
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_PASSWORD }}
-         # registry-username: ${{ secrets.AZURE_USERNAME }}
-          #registry-password: ${{ secrets.AZURE_PASSWORD }}
+          #username: ${{ secrets.DOCKERHUB_USERNAME }}
+         # password: ${{ secrets.DOCKERHUB_PASSWORD }}
+          registry-username: ${{ secrets.DOCKERHUB_USERNAME }}
+          registry-password: ${{ secrets.DOCKERHUB_PASSWORD }}
           name: helloworlddev
           location: 'EAST US'
      
