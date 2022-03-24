@@ -1,6 +1,6 @@
 FROM tomcat:8.5.5-jre8
 
-LABEL maintainer="rick@ricktbaker.com"
+LABEL maintainer="kartheekvemula001@gmail.com"
 
 COPY conf/tomcat-users.xml /usr/local/tomcat/conf/tomcat-users.xml
 COPY conf/context.xml /usr/local/tomcat/webapps/manager/META-INF/context.xml
