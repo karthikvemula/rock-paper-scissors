@@ -22,3 +22,18 @@ jobs:
           SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
           SSH_KNOWN_HOSTS: ${{secrets.SSH_KNOWN_HOSTS}}
           SSH_KEY_PATH: ${{ github.workspace }}/../private.key
+
+  deploy:
+    name: SCP files to remote server
+    runs-on: ubuntu-latest
+    steps:
+      - name: SCP files via ssh key
+        uses: appleboy/scp-action@master
+        env:
+          USERNAME: ${{ secrets.USERNAME }}
+          HOST: ${{ secrets.HOST }}
+          KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          #port: ${{ secrets.PORT }}
+        with:
+          source: './k8s/service.yml'
+          target: '/home/azureuser'
