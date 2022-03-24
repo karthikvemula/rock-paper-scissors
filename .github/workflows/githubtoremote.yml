@@ -32,7 +32,7 @@ jobs:
         env:
           USERNAME: ${{ secrets.USERNAME }}
           HOST: ${{ secrets.HOST }}
-          KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          KEY: ${{ secrets.SSH_KNOWN_HOSTS }}
           #port: ${{ secrets.PORT }}
         with:
           source: './k8s/service.yml'
