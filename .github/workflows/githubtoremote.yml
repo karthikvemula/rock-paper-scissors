@@ -32,8 +32,8 @@ jobs:
         env:
           USERNAME: ${{ secrets.USERNAME }}
           HOST: ${{ secrets.HOST }}
-          KEY: ${{ secrets.SSH_KNOWN_HOSTS }}
+          KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           #port: ${{ secrets.PORT }}
         with:
-          source: './k8s/service.yml'
-          target: '/home/azureuser'
+          source: './k8s/*'
+          target: '/home/azureuser/'
