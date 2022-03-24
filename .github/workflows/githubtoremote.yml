@@ -33,7 +33,7 @@ jobs:
           USERNAME: ${{ secrets.USERNAME }}
           HOST: ${{ secrets.HOST }}
           KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          #port: ${{ secrets.PORT }}
+          ##port: ${{ secrets.PORT }}
         with:
           source: './k8s/*'
           target: '/home/azureuser/'
