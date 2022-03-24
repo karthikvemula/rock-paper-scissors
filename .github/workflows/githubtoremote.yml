@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: SCP files via ssh key
-        uses: a-was/scp-action@master
+        uses: a-was/scp-action@v1
         env:
           USERNAME: ${{ secrets.USERNAME }}
           HOST: ${{ secrets.HOST }}
