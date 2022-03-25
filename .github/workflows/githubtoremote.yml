@@ -30,7 +30,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2    
       - name: Upload Files
-        uses: siva1024/scp-deployer@latest
+        uses: ./
+        #siva1024/scp-deployer@latest
         ##env:
         with:
           host: ${{ secrets.HOST }}
@@ -38,6 +39,5 @@ jobs:
           #host: ${{ secrets.HOST }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           ##port: ${{ secrets.PORT }}
-        
-          source: './k8s/*'
-          target: '/home/azureuser/'
+          local: 'k8s/*'
+          remote: '/home/azureuser/'
