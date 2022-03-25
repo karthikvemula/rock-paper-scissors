@@ -1,4 +1,4 @@
-##This is a basic workflow to help you get started with Actions
+#This is a basic workflow to help you get started with Actions
 
 name: scp connection
 on:
@@ -23,8 +23,8 @@ jobs:
           ls -la
          # cat ~/.ssh/known_hosts
           #cat ../private.key
-          pwd
-          whoami
+          #pwd
+          #whoami
         shell: bash
         env:
           SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
