@@ -18,6 +18,8 @@ jobs:
           sudo chmod 600 ../private.key
           echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
           ls -la ~/.ssh/
+          cat ~/.ssh/known_hosts
+          cat ../private.key
           pwd
         shell: bash
         env:
