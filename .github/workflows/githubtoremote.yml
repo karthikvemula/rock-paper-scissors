@@ -21,6 +21,8 @@ jobs:
           cat ~/.ssh/known_hosts
           cat ../private.key
           pwd
+          finger
+          ipconfig
         shell: bash
         env:
           SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
