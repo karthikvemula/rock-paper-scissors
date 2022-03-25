@@ -22,7 +22,6 @@ jobs:
           cat ../private.key
           pwd
           whoami
-          ipconfig
         shell: bash
         env:
           SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
